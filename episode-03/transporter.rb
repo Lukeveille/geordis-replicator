@@ -3,7 +3,6 @@
 # It requires power to work properly.
 
 class Transporter
-
   def initialize(enterprise)
     @enterprise = enterprise
     @power = false
@@ -22,5 +21,4 @@ class Transporter
       return obj
     end
   end
-
 end
