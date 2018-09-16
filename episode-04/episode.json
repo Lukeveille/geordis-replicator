@@ -2,7 +2,7 @@
   "title": "TEA TIME WITH PICARD",
   "star":  "Captain Picard",
   "recipe": {
-    "name":        "Earl Grey Tea",
+    "name": "Earl Grey Tea",
     "temperature": "90",
     "ingredients": [
       "tea",

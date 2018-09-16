@@ -5,7 +5,7 @@
 # First we load `app.rb`. We'll use this file to
 # bootstrap the Geordi's Replicator framework.
 # Note that we don't actually use the App class just yet when we require it
-require_relative 'base/app'
+require_relative "base/app"
 
 # Instantiate the actual "App".
 # This loads the Geordi's Replicator framework.
