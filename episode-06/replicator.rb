@@ -1,3 +1,5 @@
+require "pry-nav"
+
 class Replicator
 
   # When the Enterprise calls Replicator.new, this method executes.
@@ -143,11 +145,10 @@ class Replicator
     # and @inside_replicator will no longer contain the glass.
     transport_glass_to_reactor
 
-
     # Setup variables for temperature adjustment loop
-    desired_temperature         = @recipe.temperature
+    desired_temperature = @recipe.temperature
     maximum_adjustments_allowed = 70
-    number_of_adjustments       = 0
+    number_of_adjustments = 0
 
     # Keep adjusting temperature until desired temperature is reached
     # or too many attempts have been made to adjust temperature.
@@ -155,7 +156,6 @@ class Replicator
     # recipe temperature after the loop has finished.
     while @glass.temperature != desired_temperature &&
           number_of_adjustments <= maximum_adjustments_allowed
-
       if @glass.temperature > desired_temperature
         @enterprise.reactor.cool_items_in_core
       elsif @glass.temperature < desired_temperature
@@ -163,14 +163,12 @@ class Replicator
       end
 
       number_of_adjustments += 1
-
     end
 
     # Transport glass from reactor back to inside the replicator.
     # If successful, @enterprise.reactor.core will now be empty
     # and @inside_replicator will once again contain the glass.
     transport_glass_from_reactor
-
   end
 
   def transport_glass_to_reactor
@@ -196,5 +194,4 @@ class Replicator
       @plate
     )
   end
-
 end
