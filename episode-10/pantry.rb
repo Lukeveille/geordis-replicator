@@ -4,7 +4,6 @@
 # to make the recipe if it's working properly.
 
 class Pantry
-
   def initialize
     @shelf = Location.new
     stock_shelf
@@ -18,7 +17,7 @@ class Pantry
     Ingredient.names.each do |ingredient_name|
       3.times do
         # obrien_plays_practical_joke
-        @shelf.contents << Ingredient.new('banana')
+        @shelf.contents << Ingredient.new(ingredient_name)
       end
     end
   end
@@ -26,5 +25,4 @@ class Pantry
   def find_ingredient(name)
     @shelf.contents.find { |item| item.name == name }
   end
-
 end
